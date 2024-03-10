@@ -45,6 +45,7 @@ echo 8**2;
 echo "<br />";
 
 // Task 13
+
 $myNum = 90;
 $answer = $myNum;
 
@@ -69,8 +70,7 @@ $result = $a % $b;
 
 echo $result;
 
-echo "<br>";
-echo "\n";
+echo "<br />";
 
 if ($result == 0) {
     echo "Shared without remainder with the result: ";
@@ -81,16 +81,14 @@ else {
     echo $result;
 }
 
-echo "<br>";
-echo "\n";
+echo "<br />";
 
 // Working with degree and root
 
 $st = pow(2,10);
 echo sqrt(245);
 
-echo "<br>";
-echo "\n";
+echo "<br />";
 
 $array = array(4,2,5,19,13,0,10);
 $sum = 0;
@@ -99,8 +97,7 @@ foreach ($array as $value) {
 }
 echo "The result of array operations: " . sqrt($sum);
 
-echo "<br>";
-echo "\n";
+echo "<br />";
 
 // Working with rounding functions
 
@@ -108,18 +105,15 @@ $root379 = sqrt(379);
 
 echo round($root379);
 
-echo "<br>";
-echo "\n";
+echo "<br />";
 
 echo round($root379,1);
 
-echo "<br>";
-echo "\n";
+echo "<br />";
 
 echo round($root379,2);
 
-echo "<br>";
-echo "\n";
+echo "<br />";
 
 // floor, ceil
 
@@ -136,8 +130,7 @@ $minMax = array(4,-2,5,19,-130,0,10);
 
 echo min($minMax);
 
-echo "<br>";
-echo "\n";
+echo "<br />";
 
 echo max($minMax);
 
@@ -153,8 +146,7 @@ foreach ($randArr as $value) {
     echo $value . " ";
 }
 
-echo "<br>";
-echo "\n";
+echo "<br />";
 
 // Working with the module
 
@@ -164,8 +156,7 @@ for ($i = 0; $i < 3; $i++) {
 
     echo abs($a - $b);
 
-    echo "<br>";
-    echo "\n";
+    echo "<br />";
 }
 
 $negArr = array(1,2,-1,-2,3,-3);
@@ -179,9 +170,7 @@ foreach ($posArr as $value) {
     echo $value . " ";
 }
 
-echo "<br>";
-echo "\n";
-
+echo "<br />";
 // General
 
 $anyNum = 30;
@@ -197,8 +186,7 @@ foreach ($anyArr as $value) {
     echo $value . " ";
 }
 
-echo "<br>";
-echo "\n";
+echo "<br />";
 
 $sumArr = array(1,2,3,4,5,6,7,8,9,10);
 $sumMore = 0;
@@ -224,5 +212,88 @@ function printStringReturnNumber()
 }
 $myNum = printStringReturnNumber();
 echo $myNum;
+
+echo "<br />";
+
+// Task 16
+
+function increaseEnthusiasm($str) {
+
+    return $str . "!";
+
+}
+
+echo increaseEnthusiasm("Hello, world");
+
+echo "<br />";
+
+function repeatThreeTimes($str) {
+    return $str . $str . $str;
+}
+
+echo repeatThreeTimes("123");
+
+echo "<br />";
+
+echo increaseEnthusiasm(repeatThreeTimes("321"));
+
+echo "<br />";
+
+function cut($str, $num = 10) {
+
+    if (strlen($str) <= $num) {
+        return $str;
+    } else {
+        $result = '';
+        for ($i = 0; $i < $num; $i++) {
+            $result .= $str[$i];
+        }
+        return $result;
+    }
+}
+
+echo cut("Manage Registration", 8);
+
+echo "<br />";
+
+echo cut("Manage Registration");
+
+echo "<br />";
+
+$anyArray = array(2, 39, 4, 9, 22, 90, 0);
+
+function recArr($array, $len, $i = 0)
+{
+    if ($i == $len) {
+        return;
+    }
+    echo $array[$i] . " ";
+    $i++;
+    recArr($array, $len, $i);
+}
+
+recArr($anyArray, count($anyArray));
+
+echo "<br />";
+
+function sumOfNum($number)
+{
+    while ($number > 9)
+    {
+        $sum = 0;
+        while ($number > 0)
+        {
+            $digit = $number % 10;
+            $sum += $digit;
+            $number = (int)($number / 10);
+        }
+        $number = $sum;
+    }
+    return $number;
+}
+
+$number = 11111111111;
+$result = sumOfNum($number);
+echo "The sum of digits: $number = $result";
 
 echo "<br />";
