@@ -37,3 +37,9 @@ $daysPerLanguage = $days / $numLanguages;
 echo $daysPerLanguage;
 
 echo "<br />";
+
+// Task 12
+
+echo 8**2;
+
+echo "<br />";
