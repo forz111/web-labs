@@ -212,3 +212,17 @@ foreach ($sumArr as $value) {
         break;
     }
 }
+
+echo "<br />";
+
+// Task 15
+
+function printStringReturnNumber()
+{
+    echo "(╯°□°)╯︵ ┻━┻";
+    return 0;
+}
+$myNum = printStringReturnNumber();
+echo $myNum;
+
+echo "<br />";
