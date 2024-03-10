@@ -499,3 +499,15 @@ function arr3()
 echo arr3();
 
 echo "<br />";
+
+// Task 19
+
+for ($i = 1; $i <= 20; $i++)
+{
+    echo str_repeat('x', $i);
+
+    echo "<br />";
+}
+
+echo "<br />";
+
