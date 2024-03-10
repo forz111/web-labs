@@ -43,3 +43,17 @@ echo "<br />";
 echo 8**2;
 
 echo "<br />";
+
+// Task 13
+$myNum = 90;
+$answer = $myNum;
+
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $myNum;
+
+echo $answer;
+
+echo "<br />";
