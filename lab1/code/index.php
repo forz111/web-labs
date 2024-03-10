@@ -87,7 +87,6 @@ echo "<br />";
 
 $st = pow(2,10);
 echo sqrt(245);
-
 echo "<br />";
 
 $array = array(4,2,5,19,13,0,10);
@@ -295,5 +294,124 @@ function sumOfNum($number)
 $number = 11111111111;
 $result = sumOfNum($number);
 echo "The sum of digits: $number = $result";
+
+echo "<br />";
+
+// Task 17
+
+$array1 = [];
+
+function arrayOfx($array1, $count) {
+    for ($i=1; $i<=$count; $i++) {
+        $array1[] = str_repeat("x", $i);
+    }
+
+    foreach ($array1 as $value) {
+        echo "\n";
+        echo $value;
+    }
+}
+
+echo arrayOfx($array1, 11);
+
+echo "<br />";
+
+$array2 = [];
+
+function arrayFill($elem, $count) {
+    for ($i=0; $i<$count; $i++) {
+        $array2[] = $elem;
+    }
+
+    foreach ($array2 as $value) {
+        echo "\n";
+        echo $value;
+    }
+}
+
+echo arrayFill('x', 5);
+
+echo "<br />";
+
+$array3 = array(
+    array(6, 5, 4),
+    array(3, 2),
+    array(1)
+);
+
+function sumOfElemArr($array3)
+{
+    $sum = 0;
+    foreach ($array3 as $array) {
+        foreach ($array as $elem) {
+            $sum += $elem;
+        }
+    }
+    return $sum;
+}
+
+echo sumOfElemArr($array3);
+
+echo "<br />";
+
+$count = 1;
+$array4 = [];
+for ($i = 0; $i < 3; $i++) {
+    for ($j = &$count; $j < 10; $j++) {
+        $array4[$i][] = $j;
+    }
+}
+
+foreach ($array4 as $array) {
+    foreach ($array as $elem) {
+        echo $elem . ' ';
+    }
+}
+
+echo "<br />";
+
+$multArray = array(2, 5, 3, 9);
+
+$firstNum = $multArray[0] * $multArray[1];
+$secondNum = $multArray[2] * $multArray[3];
+$result = $firstNum + $secondNum;
+
+echo $result;
+
+echo "<br />";
+
+$user = array(
+    'name' => 'Pavel',
+    'surname' => 'Veselkov',
+    'patronymic' => 'Yurievich'
+);
+
+echo $user['surname'] . ' ' . $user['name'] . ' ' . $user['patronymic'];
+
+echo "<br />";
+
+$date = array(
+    'year' => 2024,
+    'month' => 3,
+    'day' => 9
+);
+
+echo $date['year'] . '-' . $date['month'] . '-' . $date['day'];
+
+echo "<br />";
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+$count = 0;
+
+foreach ($arr as $elem) {
+    $count++;
+}
+
+echo $count;
+
+echo "<br />";
+
+echo $arr[$count - 1];
+echo $arr[$count - 2];
 
 echo "<br />";
