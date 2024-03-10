@@ -509,5 +509,35 @@ for ($i = 1; $i <= 20; $i++)
     echo "<br />";
 }
 
+// Task 20
+
+$arr = [5, 15, 20, 25, 5];
+
+$sum = array_sum($arr);
+$average = $sum / count($arr);
+
+echo $average;
+
 echo "<br />";
 
+echo array_sum(range(1, 100));
+
+echo "<br />";
+
+$arrRoot = [5, 12, 20, 15, 2];
+
+$arrRoot2 = array_map('sqrt', $arrRoot);
+
+print_r($arrRoot2);
+
+echo "<br />";
+
+$letterNumArr = array_combine(range('a', 'z'), range(1, 26));
+print_r($letterNumArr);;
+
+echo "<br />";
+
+$str = '1234567890';
+$sum = array_sum(str_split($str, 2));
+
+echo $sum;
