@@ -415,3 +415,87 @@ echo $arr[$count - 1];
 echo $arr[$count - 2];
 
 echo "<br />";
+
+// Task 18
+
+function sumStatement($num1, $num2)
+{
+    if (10 < ($num1 + $num2))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+echo sumStatement(53, 1);
+
+echo "<br />";
+
+function equalStatement($num1, $num2)
+{
+    if ($num1 == $num2)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+echo equalStatement(-2, -2);
+
+echo "<br />";
+
+$test = 0;
+if (!$test) echo "верно";
+
+echo "<br />";
+
+$age = 55;
+$sum = 0;
+
+if (10 > $age || 99 < $age) {
+    echo "A number less than 10 or a number greater than 99";
+} else
+{
+    while (0 < $age) {
+
+        $sum += $age % 10;
+        $age = floor($age / 10);
+    }
+
+    if (9 >= $sum)
+    {
+        echo "The sum of the digits is single-digit";
+    } else {
+        echo "The sum of the digits is double digits";
+    }
+}
+
+echo "<br />";
+
+function arr3()
+{
+    $arr = array(1,2,3);
+    $sum = 0;
+    if (count($arr) == 3)
+    {
+        foreach ($arr as $elem)
+        {
+            $sum += $elem;
+        }
+    }
+    if ($sum != 0)
+    {
+        return $sum;
+    }
+    else return "The array does not have 3 elements";
+}
+
+echo arr3();
+
+echo "<br />";
