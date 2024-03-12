@@ -40,7 +40,7 @@ echo "<br />";
 
 // Task 12
 
-echo 8**2;
+echo 8 ** 2;
 
 echo "<br />";
 
@@ -72,11 +72,10 @@ echo $result;
 
 echo "<br />";
 
-if ($result == 0) {
+if (0 === $result) {
     echo "Shared without remainder with the result: ";
     echo $a / $b;
-}
-else {
+} else {
     echo "Divided with the remainder: ";
     echo $result;
 }
@@ -85,11 +84,11 @@ echo "<br />";
 
 // Working with degree and root
 
-$st = pow(2,10);
+$st = pow(2, 10);
 echo sqrt(245);
 echo "<br />";
 
-$array = array(4,2,5,19,13,0,10);
+$array = array(4, 2, 5, 19, 13, 0, 10);
 $sum = 0;
 foreach ($array as $value) {
     $sum += pow($value, 2);
@@ -106,11 +105,11 @@ echo round($root379);
 
 echo "<br />";
 
-echo round($root379,1);
+echo round($root379, 1);
 
 echo "<br />";
 
-echo round($root379,2);
+echo round($root379, 2);
 
 echo "<br />";
 
@@ -125,7 +124,7 @@ $floorCeil = array(
 
 // Working with min and max
 
-$minMax = array(4,-2,5,19,-130,0,10);
+$minMax = array(4, -2, 5, 19, -130, 0, 10);
 
 echo min($minMax);
 
@@ -135,7 +134,7 @@ echo max($minMax);
 
 // Working with random
 
-echo rand(1,100);
+echo rand(1, 100);
 
 for ($i = 0; $i < 10; $i++) {
     $randArr[] = rand();
@@ -158,7 +157,7 @@ for ($i = 0; $i < 3; $i++) {
     echo "<br />";
 }
 
-$negArr = array(1,2,-1,-2,3,-3);
+$negArr = array(1, 2, -1, -2, 3, -3);
 $posArr = [];
 
 foreach ($negArr as $value) {
@@ -175,8 +174,8 @@ echo "<br />";
 $anyNum = 30;
 $anyArr = [];
 
-for ($i=1; $i <= 30; $i++) {
-    if (($anyNum % $i) == 0) {
+for ($i = 1; $i <= 30; $i++) {
+    if (0 === ($anyNum % $i)) {
         $anyArr[] = $i;
     }
 }
@@ -187,14 +186,14 @@ foreach ($anyArr as $value) {
 
 echo "<br />";
 
-$sumArr = array(1,2,3,4,5,6,7,8,9,10);
+$sumArr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 $sumMore = 0;
 $count = 0;
 
 foreach ($sumArr as $value) {
     $sumMore += $value;
     $count += 1;
-    if ($sumMore > 10) {
+    if (10 < $sumMore) {
         echo "The number of the first elements of the array: $count.";
         break;
     }
@@ -209,6 +208,7 @@ function printStringReturnNumber()
     echo "(╯°□°)╯︵ ┻━┻";
     return 0;
 }
+
 $myNum = printStringReturnNumber();
 echo $myNum;
 
@@ -216,7 +216,8 @@ echo "<br />";
 
 // Task 16
 
-function increaseEnthusiasm($str) {
+function increaseEnthusiasm($str)
+{
 
     return $str . "!";
 
@@ -226,7 +227,8 @@ echo increaseEnthusiasm("Hello, world");
 
 echo "<br />";
 
-function repeatThreeTimes($str) {
+function repeatThreeTimes($str)
+{
     return $str . $str . $str;
 }
 
@@ -238,7 +240,8 @@ echo increaseEnthusiasm(repeatThreeTimes("321"));
 
 echo "<br />";
 
-function cut($str, $num = 10) {
+function cut($str, $num = 10)
+{
 
     if (strlen($str) <= $num) {
         return $str;
@@ -277,11 +280,9 @@ echo "<br />";
 
 function sumOfNum($number)
 {
-    while ($number > 9)
-    {
+    while (9 < $number) {
         $sum = 0;
-        while ($number > 0)
-        {
+        while (0 < $number) {
             $digit = $number % 10;
             $sum += $digit;
             $number = (int)($number / 10);
@@ -301,8 +302,9 @@ echo "<br />";
 
 $array1 = [];
 
-function arrayOfx($array1, $count) {
-    for ($i=1; $i<=$count; $i++) {
+function arrayOfx($array1, $count)
+{
+    for ($i = 1; $i <= $count; $i++) {
         $array1[] = str_repeat("x", $i);
     }
 
@@ -318,8 +320,9 @@ echo "<br />";
 
 $array2 = [];
 
-function arrayFill($elem, $count) {
-    for ($i=0; $i<$count; $i++) {
+function arrayFill($elem, $count)
+{
+    for ($i = 0; $i < $count; $i++) {
         $array2[] = $elem;
     }
 
@@ -420,12 +423,9 @@ echo "<br />";
 
 function sumStatement($num1, $num2)
 {
-    if (10 < ($num1 + $num2))
-    {
+    if (10 < ($num1 + $num2)) {
         return true;
-    }
-    else
-    {
+    } else {
         return false;
     }
 }
@@ -436,12 +436,9 @@ echo "<br />";
 
 function equalStatement($num1, $num2)
 {
-    if ($num1 == $num2)
-    {
+    if ($num1 == $num2) {
         return true;
-    }
-    else
-    {
+    } else {
         return false;
     }
 }
@@ -460,16 +457,14 @@ $sum = 0;
 
 if (10 > $age || 99 < $age) {
     echo "A number less than 10 or a number greater than 99";
-} else
-{
+} else {
     while (0 < $age) {
 
         $sum += $age % 10;
         $age = floor($age / 10);
     }
 
-    if (9 >= $sum)
-    {
+    if (9 >= $sum) {
         echo "The sum of the digits is single-digit";
     } else {
         echo "The sum of the digits is double digits";
@@ -480,20 +475,16 @@ echo "<br />";
 
 function arr3()
 {
-    $arr = array(1,2,3);
+    $arr = array(1, 2, 3);
     $sum = 0;
-    if (count($arr) == 3)
-    {
-        foreach ($arr as $elem)
-        {
+    if (3 === count($arr)) {
+        foreach ($arr as $elem) {
             $sum += $elem;
         }
     }
-    if ($sum != 0)
-    {
+    if (0 != $sum) {
         return $sum;
-    }
-    else return "The array does not have 3 elements";
+    } else return "The array does not have 3 elements";
 }
 
 echo arr3();
@@ -502,8 +493,7 @@ echo "<br />";
 
 // Task 19
 
-for ($i = 1; $i <= 20; $i++)
-{
+for ($i = 1; $i <= 20; $i++) {
     echo str_repeat('x', $i);
 
     echo "<br />";
