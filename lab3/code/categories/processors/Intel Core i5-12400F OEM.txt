@@ -1,0 +1,3 @@
+user@company.com
+Intel Core i5-12400F OEM
+LGA 1700, 6 x 2.5 ГГц, L2 - 7.5 МБ, L3 - 18 МБ, 2 х DDR4, DDR5-4800 МГц, TDP 117 Вт
